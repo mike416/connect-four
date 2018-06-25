@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "dev": "ng serve",
-    "start": "ng serve --aot",
+    "start": "ng serve --aot --port 8080  --live-reload false --prod",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
