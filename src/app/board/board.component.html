@@ -1,0 +1,20 @@
+<div class="container">
+  <div *ngIf="!this.finish" class="border card-body">
+  Turn : Player #{{currentPlayer.playerNumber}}
+  Type: {{currentPlayer.type}}
+  </div>
+  <div *ngIf="this.finish" class="border card-body">
+   {{status}}
+  </div>
+
+  <div class="row align-self-center">
+    <div *ngFor="let column of columns" class="col-1" (click)="selectColumn(column)">
+      <div class="row border card-body" [ngClass]="[column.moves[5] ? column.moves[5].color : '']"></div>
+      <div class="row border card-body" [ngClass]="[column.moves[4] ? column.moves[4].color : '']"></div>
+      <div class="row border card-body" [ngClass]="[column.moves[3] ? column.moves[3].color : '']"></div>
+      <div class="row border card-body" [ngClass]="[column.moves[2] ? column.moves[2].color : '']"></div>
+      <div class="row border card-body" [ngClass]="[column.moves[1] ? column.moves[1].color : '']"></div>
+      <div class="row border card-body" [ngClass]="[column.moves[0] ? column.moves[0].color : '']"></div>
+    </div>
+  </div>
+</div>
